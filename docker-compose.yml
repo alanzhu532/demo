@@ -5,10 +5,3 @@ services:
     build: .
     restart: always
     image: app:v1
-  hello-world:
-    container_name: hello-world
-    image: hello-world
-    depends_on:
-      web:
-        condition: service_healthy
-
