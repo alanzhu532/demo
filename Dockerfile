@@ -1,5 +1,5 @@
 FROM tomee:latest
-ADD sample.war /usr/local/tomee/webapps/
+ADD app.war /usr/local/tomee/webapps/
 ADD tomcat-users.xml /usr/local/tomee/conf/
 ADD settings.xml /usr/local/tomee/conf/
 CMD ["catalina.sh", "run"]
