@@ -1,0 +1,14 @@
+version: "2.1"
+services:
+  web:
+    container_name: app-web
+    build: .
+    restart: always
+    image: app:v1
+  hello-world:
+    container_name: hello-world
+    image: hello-world
+    depends_on:
+      web:
+        condition: service_healthy
+
